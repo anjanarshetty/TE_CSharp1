@@ -17,23 +17,15 @@ namespace TE_CSharp1
             int sid = 1;
             string sname = "Anjana";
             string sdept = "CSE";
-            details(out sid, out sname, out sdept);
-            /*int i;
-            int j;
-            add(out i, out j);
-            Console.WriteLine(i + " " + j); //20 40
-            int s = Convert.ToInt32(Console.ReadLine());*/
+            //details(out sid, out sname, out sdept);
+            Console.WriteLine(sid + " " + sname+" "+sdept);
             int s = Convert.ToInt32(Console.ReadLine());
         }
-        public static void details(out int sid, out string sname, out string sdept)
+        /*public static void details(out int sid, out string sname, out string sdept)
         {
             Console.WriteLine("Employee ID: " + sid);
             Console.WriteLine("Employee Name: " + sname);
             Console.WriteLine("Employee Dept : " + sdept);
-            /* a = 10;
-             b = 20;
-             a += a;//20
-             b += b;//40*/
-        }
+        }*/
     }
 }
