@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 
 namespace TE_CSharp1
 {
-    public delegate void EmpDelegate(int empid, string empname);
-    public delegate void EmpDelegate1(int empid, string empname);
+    public delegate void EmpDelegate1(string bankname, float interest1, float interest2);
+    public delegate void EmpDelegate2(string bankname,float interest);
     public class Employees
     { 
-        public void GetITLeadDetails(int empid, string empname)
+        public void GetBankDetails1(string bankname,float interest)
         {
-            Console.WriteLine($"IT: {empid}:{empname}");
+            Console.WriteLine($"Bank Name: {bankname} , Interest Rate:{interest}%");
         }
-        public void GetTestingLeadDetails(int empid, string empname)
+        public void GetBankDetails2(string bankname, float interest1,float interest2)
         {
-            Console.WriteLine($"Testing: {empid}:{empname}");
+            Console.WriteLine($"Bank Name: {bankname} , Interest Rate:{interest1}% -{interest2}%");
         }
+      
     }
     internal class Delegates
     {
@@ -26,21 +27,14 @@ namespace TE_CSharp1
         {
             //instance for the class
             Employees employees = new Employees();
-            //instance for the delegate EmpDelegate
-            //Single-cast delegate -> hold only a single reference(one method at a time)
-            EmpDelegate empDelegate = employees.GetITLeadDetails; //reference of the GetITLeadDetails()
-            empDelegate(100, "John");
-            empDelegate = employees.GetTestingLeadDetails;
-            empDelegate(201, "Peter");
-            //instance for the delegate EmpDelegate1
-            //Multi-cast delegate - EmpDelegate1 - 2 references
-            EmpDelegate1 empDelegate1 = employees.GetITLeadDetails;
-            empDelegate1 += employees.GetTestingLeadDetails;
-            Console.WriteLine("TEAM LEAD FOR IT AND TESTING");
-            empDelegate1(101, "Sam");
-            Console.WriteLine("PROJECT LEAD FOR IT");
-            empDelegate1 -= employees.GetTestingLeadDetails;
-            empDelegate1(105, "Jancy");
+            EmpDelegate1 empDelegate1 = employees.GetBankDetails2;
+            empDelegate1("HDFC Bank",3.0f,3.50f);
+            empDelegate1("Axis Bank", 3.0f, 3.50f);
+            empDelegate1("ICICI Bank", 3.0f, 3.50f);
+            EmpDelegate2 empDelegate2 = employees.GetBankDetails1;
+            empDelegate2("SBI", 2.70f);
+            empDelegate2("Kotak Mahindra Bank", 3.50f);
+            int s = Convert.ToInt32(Console.ReadLine());
         }
 
     }

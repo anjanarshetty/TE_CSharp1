@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>TE_CSharp1.Inheritance.inheritance.Program</StartupObject>
+    <StartupObject>TE_CSharp1.numberoflines</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,15 +63,21 @@
   <ItemGroup>
     <Compile Include="AccessSpecifiers.cs" />
     <Compile Include="Agevalidation.cs" />
+    <Compile Include="Collections.cs" />
     <Compile Include="Constructoroverloading.cs" />
     <Compile Include="controlstatements.cs" />
     <Compile Include="Delegates.cs" />
     <Compile Include="employee.cs" />
     <Compile Include="enumeration.cs" />
     <Compile Include="Exception.cs" />
+    <Compile Include="fileoperations.cs" />
+    <Compile Include="firstline.cs" />
+    <Compile Include="GenericDelegates.cs" />
     <Compile Include="Inheritance.cs" />
     <Compile Include="Matrixaddition.cs" />
     <Compile Include="Mobile.cs" />
+    <Compile Include="multi.cs" />
+    <Compile Include="numberoflines.cs" />
     <Compile Include="ParamArray.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Programs.cs" />
